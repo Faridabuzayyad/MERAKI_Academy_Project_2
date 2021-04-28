@@ -1,30 +1,44 @@
-h1{
-    font-family: 'New Tegomin', serif;
-    font-size: 50px;
+#header{
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    background-color:rgb(3, 19, 53);
+    height: 30px;
+    width: 1335px;
+    top: 120px;
+    opacity: .7;
+    z-index: 1;
+}
 
+.mainMenu{
+    height: 120px;
+    width: 200px;
+    font-weight: bold;
+    font-family: 'Poiret One', cursive;
+    color: cornsilk;
+    border: 1px solid white;
+    text-align: center;
+    font-size: 1.3em;
+    flex-flow: row wrap;
+}
+
+
+#title #logo{
+    position: absolute;
+    top: 20px;
+    height: 70px;
+    width: 300px;
+    z-index: 2;
+}
+
+
+
+
+#goal{
+    position: absolute;
+    top:250px;
+    height: 450px;
+    z-index: -1;
     
-}
 
-
-
-#Goal{
-    position: absolute;
-    top:150px;
-    height: 400px;
-    
-
-}
-
-#Ibra{
-    position: absolute;
-    top: 150px;
-    left:600px;
-    height: 400px;
-}
-
-#Neymar{
-    position: absolute;
-    top: 150px;
-    left:600px;
-    height: 400px;
 }
