@@ -1,0 +1,30 @@
+h1{
+    font-family: 'New Tegomin', serif;
+    font-size: 50px;
+
+    
+}
+
+
+
+#Goal{
+    position: absolute;
+    top:150px;
+    height: 400px;
+    
+
+}
+
+#Ibra{
+    position: absolute;
+    top: 150px;
+    left:600px;
+    height: 400px;
+}
+
+#Neymar{
+    position: absolute;
+    top: 150px;
+    left:600px;
+    height: 400px;
+}
