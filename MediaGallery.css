@@ -40,6 +40,10 @@ a:hover{
     z-index: 2;
 }
 
+#mediaGalleryButtons{
+    display: flex;
+    justify-content: space-around;  
+}
 #mediaGallery{
     display: flex;
     justify-content: space-around;
