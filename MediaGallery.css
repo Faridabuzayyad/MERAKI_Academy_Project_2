@@ -43,24 +43,5 @@ a:hover{
 
 
 
-#goal{
-    position: absolute;
-    top: 250px;
-    height: 450px;
-    z-index: -1;
-    left: -30px;
-    
-
-}
-
-
-
-#players{
-    position: absolute;
-    left: 750px;
-    top: 380px;
-    height: 220px;
-    width: 400px;
-}
 
 
