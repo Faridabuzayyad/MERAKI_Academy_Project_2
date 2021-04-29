@@ -4,8 +4,8 @@ const goToHomePage =() =>{
 
 goToHomePage();
 
-$("#about").click(()=>{
+const aboutPage = () =>{
     $('.bodyMain').hide();
     $('#aboutContent').show();
     $("#about").disabled();
-});
+};

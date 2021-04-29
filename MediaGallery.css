@@ -40,6 +40,23 @@ a:hover{
     z-index: 2;
 }
 
+#mediaGallery{
+    display: flex;
+    justify-content: space-around;
+}
+#ibra{
+    position: absolute;
+    height: 400px;
+    width: 200px;
+    left:300px;
+}
+
+#neymar{
+    position: absolute;
+    height: 400px;
+    width: 200px;
+    left:600px;
+}
 
 
 
