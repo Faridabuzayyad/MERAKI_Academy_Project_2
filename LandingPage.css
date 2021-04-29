@@ -4,24 +4,31 @@
     position: absolute;
     background-color:rgb(3, 19, 53);
     height: 30px;
-    width: 1335px;
+    width: 1336px;
     top: 120px;
     opacity: .7;
     z-index: 1;
 }
 
 .mainMenu{
-    height: 120px;
-    width: 200px;
+    height: 29px;
+    width: 189px;
     font-weight: bold;
     font-family: 'Poiret One', cursive;
     color: cornsilk;
-    border: 1px solid white;
+    border: 1px solid black;
     text-align: center;
     font-size: 1.3em;
     flex-flow: row wrap;
 }
 
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    background-color: green;
+}
 
 #title #logo{
     position: absolute;
@@ -39,6 +46,17 @@
     top:250px;
     height: 450px;
     z-index: -1;
+    left: -30px;
     
 
+}
+
+
+
+#players img{
+    position: absolute;
+    left:750px;
+    top:380px;
+    height: 220px;
+    width: 400px;
 }
