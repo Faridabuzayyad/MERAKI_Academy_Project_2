@@ -37,6 +37,7 @@ a:hover{
     top: 20px;
     height: 70px;
     width: 300px;
+    left: 12px;
     z-index: 2;
 }
 
@@ -64,3 +65,36 @@ a:hover{
 }
 
 
+#aboutImage{
+    position: absolute;
+    margin-top: 145px;
+    height: 1100px;
+    width: 1330px;
+    margin-left: 4px;
+}
+
+#aboutPara{
+    position: absolute;
+    margin-top: 143px;
+    margin-left: 4px;
+    height: 700px;
+    width: 1330px;
+    opacity: .9;
+    background-image: url(./Stadium.jpg);
+    background-repeat: no-repeat;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Poiret One', cursive;
+    color: honeydew;
+
+}
+
+#aboutPara span{
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Poiret One', cursive;
+    color: honeydew;
+    transform: scale(1.1);
+    
+    
+}
