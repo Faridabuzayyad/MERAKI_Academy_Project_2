@@ -95,3 +95,69 @@
     transform: scale(1.1);
     
 }
+
+
+#mediaGalleryButtons{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    top: 500px;
+    
+}
+
+#next:hover{
+    background-color: green;
+    transition: all 2s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#back:hover{
+    background-color: green;
+    transition: all 2s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#back, #next{
+    opacity: .7;
+    
+}
+#mediaGalleryPage{
+    display: flex;
+    height: 500px;
+    width: 400px;
+    top: 500px;
+}
+#ibra{
+    position: absolute;
+    height: 400px;
+    width: 220px;
+    left:615px;
+    top:200px
+}
+
+#ibra:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#neymar{
+    position: absolute;
+    height: 400px;
+    width: 300px;
+    left:480px;
+    top:200px;
+}
+
+#PhotoGallery{
+    display: flex;
+    height: 100px;
+    width: 100px;
+
+}
+
+.ibraPhotoGallery{
+    justify-content: space-between;
+    flex-direction: row;
+}

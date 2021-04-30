@@ -1,8 +1,15 @@
 // Home button function 
 const goToHomePage =() =>{
     $('#aboutContent').hide();
-    $('.bodyMain').fadeIn();
+    $('#mediaGalleryButtons').hide();
+    $('#mediaGalleryPage').hide();
+    $('.ibraPhotoGallery').hide();
+    $('.homeContent').fadeIn();
 };
+
+//load Home Page with Home page content when entering the site
+goToHomePage();
+
 // Selecting home button
 const homePage = $('#home');
 
@@ -11,9 +18,12 @@ homePage.click(goToHomePage);
 
 
 // About page function
-const goToAboutPage =() =>{
-    $('.bodyMain').fadeOut();
+const goToAboutPage =(e) =>{
     $('#aboutContent').fadeIn();
+    $('#mediaGalleryButtons').hide();
+    $('#mediaGalleryPage').hide();
+    $('.ibraPhotoGallery').hide();
+    $('.homeContent').hide();
 };
 
 //Selecting about button
@@ -24,10 +34,19 @@ aboutPage.click(goToAboutPage);
 
 //Media gallery page function
 const goToMediaGallery =() =>{
-    location.href = "./MediaGallery.html";
+    $('#aboutContent').hide();
+    $('#mediaGalleryButtons').fadeIn();
+    $('#mediaGalleryPage').fadeIn();
+    $('.ibraPhotoGallery').hide();
+    $('.homeContent').hide();
     };
 
-    $('#mediaGallery').click(goToMediaGallery);
+//Selecting media gallery button    
+const mediaGallery = $('#mediaGallery');
+
+//invoking media gallery function
+
+mediaGallery.click(goToMediaGallery);
 
 
 
@@ -71,12 +90,6 @@ const backButton = $("#back");
 nextButton.click(next);
 backButton.click(back);
 
-//when click on MediaGallery in Main menu
-//const goToMediaGallery = () =>{
-    
-//};
-
-//$(window).ready(goToMediaGallery);
 
 //when Select ibra go to his photo gallery
 $('#ibra').click((e)=>{
