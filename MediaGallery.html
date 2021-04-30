@@ -18,13 +18,13 @@
 
     <div id="title"><img id="logo" src="./Site LOGO.png" alt=""></div>
     <div id="header">
-        <a id="Home" href="./LandingPage.html"><div class="mainMenu">Home</div></a>
-        <a id="Archive" href=""><div class="mainMenu">Archive</div></a>
-        <a id="MediaGallery" href="./MediaGallery.html"><div class="mainMenu">Media Gallery</div></a>
-        <a id="LiveResults" href=""><div class="mainMenu">Live Results</div></a>
-        <a id="NewsBlog" href=""><div class="mainMenu">News Blog</div></a>
-        <a id="logIn" href=""><div class="mainMenu">Log in</div></a>
-        <a id="about" href=""><div  class="mainMenu">About us</div></a>
+        <div id="home" onclick="location.href = './LandingPage.html'"; class="mainMenu">Home</div></a>
+        <div id="archive" class="mainMenu">Archive</div></a>
+        <div id="mediaGllery" class="mainMenu">Media Gallery</div></a>
+        <div id="liveResults" class="mainMenu">Live Results</div></a>
+        <div id="newsBlog" class="mainMenu">News Blog</div></a>
+        <div id="logIn" class="mainMenu">Log in</div></a>
+        <div id="aboutUs" class="mainMenu">About us</div></a>
     </div>
 
     <div id="mediaGalleryButtons">
@@ -40,17 +40,20 @@
     <div id="mediaGallery">
         <img class="currentImage" id="ibra" src="./zlatanIbra.png" alt="Ibrahimovic">
     </div>
-     <script src="./MainScript.js"></script>
+     
 
-     <div class="currentImageGallery" id="ibraPhotoGallery">
-         <img src="./PhotoGallery/ibra1.jpg" alt="">
-         <img src="./PhotoGallery/ibra2.jpg" alt="">
-         <img src="./PhotoGallery/ibra3.jpg" alt="">
-         <img src="./PhotoGallery/ibra4.jpg" alt="">
-         <img src="./PhotoGallery/ibra5.jpg" alt="">
-         <img src="./PhotoGallery/ibra6.jpg" alt="">
-         <img src="./PhotoGallery/ibra7.jpg" alt="">
+     <div id="PhotoGallery">
+        <div class="ibraPhotoGallery">
+         <img id="ibra1" src="./PhotoGallery/ibra1.jpg" alt="" height="100px" width="200px">
+         <img id="ibra2" src="./PhotoGallery/ibra2.jpg" alt="" height="100px" width="200px">
+         <img id="ibra3" src="./PhotoGallery/ibra3.jpg" alt="" height="100px" width="200px">
+         <img id="ibra4" src="./PhotoGallery/ibra4.jpg" alt="" height="100px" width="200px">
+         <img id="ibra5" src="./PhotoGallery/ibra5.jpg" alt="" height="100px" width="200px">
+         <img id="ibra6" src="./PhotoGallery/ibra6.jpg" alt="" height="100px" width="200px">
+         <img id="ibra7" src="./PhotoGallery/ibra7.jpg" alt="" height="100px" width="200px">
+        </div>
+      
      </div>
-
+     <script src="./MainScript.js"></script>
 </body>
 </html>

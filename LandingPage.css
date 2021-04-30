@@ -23,13 +23,10 @@
     flex-flow: row wrap;
 }
 
-a{
-    text-decoration: none;
-}
-
-a:hover{
+.mainMenu:hover{
     background-color: green;
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 #title #logo{
@@ -73,7 +70,7 @@ a:hover{
     margin-left: 4px;
 }
 
-#aboutPara{
+#homePara{
     position: absolute;
     margin-top: 143px;
     margin-left: 4px;
@@ -86,15 +83,15 @@ a:hover{
     font-weight: bold;
     font-family: 'Poiret One', cursive;
     color: honeydew;
+    transition: all 2s;
 
 }
 
-#aboutPara span{
+#homePara span{
     font-size: 1.5em;
     font-weight: bold;
     font-family: 'Poiret One', cursive;
     color: honeydew;
     transform: scale(1.1);
-    
     
 }

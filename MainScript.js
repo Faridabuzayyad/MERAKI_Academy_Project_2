@@ -1,29 +1,42 @@
-// Hide other layers content , and disable Home page button
+// Home button function 
 const goToHomePage =() =>{
     $('#aboutContent').hide();
-}
+    $('.bodyMain').fadeIn();
+};
+// Selecting home button
+const homePage = $('#home');
+
+// Invoking home button function
+homePage.click(goToHomePage);
 
 
-
-//when the document is ready , invoke goToHomePage
-$(window).ready(goToHomePage)
-
-//go to about page + prevent default function ($(document).ready(goToHomePage)) from load again + enable Home button again
-$("#about").click((e) =>{
-    e.preventDefault() 
-    $('.bodyMain1').fadeOut();
-    $('.bodyMain2').fadeOut();
+// About page function
+const goToAboutPage =() =>{
+    $('.bodyMain').fadeOut();
     $('#aboutContent').fadeIn();
-    $('#Home').attr("href", './LandingPage.html');
-    $('#about').removeAttr("href")
-});
+};
+
+//Selecting about button
+const aboutPage = $('#aboutUs');
+
+// Invoking about button function
+aboutPage.click(goToAboutPage);
+
+//Media gallery page function
+const goToMediaGallery =() =>{
+    location.href = "./MediaGallery.html";
+    };
+
+    $('#mediaGallery').click(goToMediaGallery);
+
+
 
 //selecting first Image(html element)
 let currentImage = $(".currentImage");
 
 //array of players in Media Gallery Page
 let arrayOfPlayers = ['zlatanIbra.png' , 'NeymarJR.png'];
-let arrayOfIDs = ["ibra" , "neymar"]
+let arrayOfIDs = ["ibra" , "neymar"];
 
 let i = 0;
 
@@ -58,4 +71,22 @@ const backButton = $("#back");
 nextButton.click(next);
 backButton.click(back);
 
+//when click on MediaGallery in Main menu
+//const goToMediaGallery = () =>{
+    
+//};
 
+//$(window).ready(goToMediaGallery);
+
+//when Select ibra go to his photo gallery
+$('#ibra').click((e)=>{
+    e.preventDefault();
+    $('.currentImage').fadeOut();
+    $('#ibra1').hide();
+    $('#ibra2').hide();
+        $('#ibra3').hide();
+        $('#ibra4').hide();
+        $('#ibra5').hide();
+        $('#ibra6').hide();
+        $('#ibra7').hide();
+});
