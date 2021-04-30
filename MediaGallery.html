@@ -24,7 +24,12 @@
         <a id="LiveResults" href=""><div class="mainMenu">Live Results</div></a>
         <a id="NewsBlog" href=""><div class="mainMenu">News Blog</div></a>
         <a id="logIn" href=""><div class="mainMenu">Log in</div></a>
-        <a id="about" href=""><div  class="mainMenu">About us</div></a>
+        <a id="about" onclick="click((e) =>{
+            e.preventDefault() 
+            $('.bodyMain1').fadeOut();
+            $('.bodyMain2').fadeOut();
+            $('#aboutContent').fadeIn();
+        })" href=""><div  class="mainMenu">About us</div></a>
     </div>
 
     <div id="mediaGalleryButtons">
@@ -38,8 +43,7 @@
 
      </div>
     <div id="mediaGallery">
-        <img id="ibra" src="./zlatanIbra.png" alt="Ibrahimovic">
-        <img id="neymar" src="./NeymarJR.png" alt="Neymar">
+        <img class="currentImage" id="ibra" src="./zlatanIbra.png" alt="Ibrahimovic">
     </div>
      <script src="./MainScript.js"></script>
 

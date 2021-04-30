@@ -1,11 +1,12 @@
 // Hide other layers content , and disable Home page button
 const goToHomePage =() =>{
     $('#aboutContent').hide();
-    $('#Home').removeAttr("href");
 }
 
+
+
 //when the document is ready , invoke goToHomePage
-$(document).ready(goToHomePage)
+$(window).ready(goToHomePage)
 
 //go to about page + prevent default function ($(document).ready(goToHomePage)) from load again + enable Home button again
 $("#about").click((e) =>{
@@ -17,38 +18,43 @@ $("#about").click((e) =>{
     $('#about').removeAttr("href")
 });
 
-//selecting players (html elements)
-const ibrahimovic = $("#ibra");
-const neymar = $("#neymar");
-neymar.hide();
+//selecting first Image(html element)
+let currentImage = $(".currentImage");
 
 //array of players in Media Gallery Page
-const arrayOfPlayers = [ibrahimovic , neymar];
+let arrayOfPlayers = ['zlatanIbra.png' , 'NeymarJR.png'];
+let arrayOfIDs = ["ibra" , "neymar"]
 
-//next button functionality
-const mediaGalleryNext = () => {
-    for(i=0 ; i < arrayOfPlayers.length ; i++){
-        if(arrayOfPlayers[i].is(":visible") ){
-            arrayOfPlayers[i].fadeOut()
-            arrayOfPlayers[i+1].fadeIn()
-        };
-    };
-};
+let i = 0;
 
 //back button functionality
-const mediaGalleryBack = () => {
-    for(i=0 ; i < arrayOfPlayers.length ; i--){
-        if(arrayOfPlayers[i].is(":visible")){
-            arrayOfPlayers[i].fadeOut()
-            arrayOfPlayers[i-1].fadeIn()
-        };
-    };
+function back(){
+    if(i <= 0) i = arrayOfPlayers.length;
+	i--;
+	return showImage();			 
+}
+
+//next button functionality
+const next = () => {
+    if(i >= arrayOfPlayers.length-1) i = -1; 
+	i++;
+	return showImage();
 };
+
+//show the image depending on button(next or back)
+function showImage(){
+    currentImage.attr('id', arrayOfIDs[i]) ;
+	currentImage.attr('src', "./"+arrayOfPlayers[i]);
+    return currentImage
+
+} 
+ 
 
 //selecting buttons
 const nextButton = $("#next");
 const backButton = $("#back");
 
 //on click functionality
-nextButton.click(mediaGalleryNext);
-backButton.click(mediaGalleryBack);
+nextButton.click(next);
+backButton.click(back);
+
