@@ -43,8 +43,8 @@ const next = () => {
 
 //show the image depending on button(next or back)
 function showImage(){
+    currentImage.attr('src', "./"+arrayOfPlayers[i]);
     currentImage.attr('id', arrayOfIDs[i]) ;
-	currentImage.attr('src', "./"+arrayOfPlayers[i]);
     return currentImage
 
 } 
@@ -57,4 +57,5 @@ const backButton = $("#back");
 //on click functionality
 nextButton.click(next);
 backButton.click(back);
+
 

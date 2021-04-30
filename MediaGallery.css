@@ -76,8 +76,12 @@ a:hover{
     position: absolute;
     height: 400px;
     width: 220px;
-    left:620px;
+    left:615px;
     top:200px
+}
+
+#ibra:hover{
+    transform: scale(1.1);
 }
 
 #neymar{
