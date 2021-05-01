@@ -34,11 +34,12 @@ aboutPage.click(goToAboutPage);
 
 //Media gallery page function
 const goToMediaGallery =() =>{
+    console.log("working");
     $('#aboutContent').hide();
+    $('#PhotoGallery').hide();
+    $('.homeContent').hide();
     $('#mediaGalleryButtons').fadeIn();
     $('#mediaGalleryPage').fadeIn();
-    $('.ibraPhotoGallery').hide();
-    $('.homeContent').hide();
     };
 
 //Selecting media gallery button    
