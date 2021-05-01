@@ -214,3 +214,20 @@ $('#ibra7').click(()=>{
         width : 210,
     });
 });
+
+
+//zoom in photo to original size
+$('#ibra8').dblclick(()=>{
+    $('#ibra8').animate({
+        height: 470,
+        width : 594,
+    });
+});
+
+//zoom out to gallery
+$('#ibra8').click(()=>{
+    $('#ibra8').animate({
+        height: 120,
+        width : 210,
+    });
+});
