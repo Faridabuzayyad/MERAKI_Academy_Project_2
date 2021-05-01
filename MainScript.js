@@ -34,7 +34,6 @@ aboutPage.click(goToAboutPage);
 
 //Media gallery page function
 const goToMediaGallery =() =>{
-    console.log("working");
     $('#aboutContent').hide();
     $('.photoShow').hide();
     $('.homeContent').hide();
@@ -48,6 +47,23 @@ const mediaGallery = $('#mediaGallery');
 //invoking media gallery function
 
 mediaGallery.click(goToMediaGallery);
+
+// Log in page function
+const goToLogIn =() =>{
+    $('#aboutContent').fadeOut();
+    $('.photoShow').fadeOut();
+    $('.homeContent').fadeOut();
+    $('#mediaGalleryButtons').fadeOut();
+    $('#mediaGalleryPage').fadeOut();
+    $('#logInPage').fadeIn();
+    };
+
+//Selecting Log in button    
+const logIn = $('#logIn');
+
+//invoking LogIn function
+
+logIn.click(goToLogIn);
 
 
 
