@@ -150,3 +150,19 @@ $('#ibra3').click(()=>{
     });
 });
 
+//zoom in photo to original size
+$('#ibra4').dblclick(()=>{
+    $('#ibra4').animate({
+        height: 557,
+        width : 990,
+    });
+});
+
+//zoom out to gallery
+$('#ibra4').click(()=>{
+    $('#ibra4').animate({
+        height: 120,
+        width : 210,
+    });
+});
+
