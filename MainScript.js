@@ -279,3 +279,19 @@ $('#ibra11').click(()=>{
         width : 210,
     });
 });
+
+//zoom in photo to original size
+$('#ibra12').dblclick(()=>{
+    $('#ibra12').animate({
+        height: 612,
+        width : 407,
+    });
+});
+
+//zoom out to gallery
+$('#ibra12').click(()=>{
+    $('#ibra12').animate({
+        height: 120,
+        width : 210,
+    });
+});
