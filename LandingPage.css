@@ -222,3 +222,12 @@
 #aboutParagraph:hover{
     transform: scale(1.1);
 }
+
+#logInPage{
+    position: absolute;
+    border: black solid;
+    height: 500px;
+    width: 700px;
+    top: 200px;
+    left: 300px;
+}

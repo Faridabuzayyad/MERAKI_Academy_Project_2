@@ -4,6 +4,7 @@ const goToHomePage =() =>{
     $('#mediaGalleryButtons').hide();
     $('#mediaGalleryPage').hide();
     $('.photoShow').hide();
+    $('#logInPage').fadeOut();
     $('.homeContent').fadeIn();
 };
 
@@ -22,6 +23,7 @@ const goToAboutPage =(e) =>{
     $('#aboutContent').fadeIn();
     $('#mediaGalleryButtons').hide();
     $('#mediaGalleryPage').hide();
+    $('#logInPage').fadeOut();
     $('.photoShow').hide();
     $('.homeContent').hide();
 };
@@ -37,6 +39,7 @@ const goToMediaGallery =() =>{
     $('#aboutContent').hide();
     $('.photoShow').hide();
     $('.homeContent').hide();
+    $('#logInPage').fadeOut();
     $('#mediaGalleryButtons').fadeIn();
     $('#mediaGalleryPage').fadeIn();
     };
