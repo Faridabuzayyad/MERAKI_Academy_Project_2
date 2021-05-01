@@ -3,7 +3,7 @@ const goToHomePage =() =>{
     $('#aboutContent').hide();
     $('#mediaGalleryButtons').hide();
     $('#mediaGalleryPage').hide();
-    $('.ibraPhotoGallery').hide();
+    $('.photoShow').hide();
     $('.homeContent').fadeIn();
 };
 
@@ -22,7 +22,7 @@ const goToAboutPage =(e) =>{
     $('#aboutContent').fadeIn();
     $('#mediaGalleryButtons').hide();
     $('#mediaGalleryPage').hide();
-    $('.ibraPhotoGallery').hide();
+    $('.photoShow').hide();
     $('.homeContent').hide();
 };
 
@@ -36,7 +36,7 @@ aboutPage.click(goToAboutPage);
 const goToMediaGallery =() =>{
     console.log("working");
     $('#aboutContent').hide();
-    $('#PhotoGallery').hide();
+    $('.photoShow').hide();
     $('.homeContent').hide();
     $('#mediaGalleryButtons').fadeIn();
     $('#mediaGalleryPage').fadeIn();
@@ -93,14 +93,25 @@ backButton.click(back);
 
 
 //when Select ibra go to his photo gallery
-$('#ibra').click((e)=>{
-    e.preventDefault();
-    $('.currentImage').fadeOut();
-    $('#ibra1').hide();
-    $('#ibra2').hide();
-        $('#ibra3').hide();
-        $('#ibra4').hide();
-        $('#ibra5').hide();
-        $('#ibra6').hide();
-        $('#ibra7').hide();
+$('#ibra').click(()=>{
+    $('#mediaGalleryButtons').fadeOut();
+    $('#mediaGalleryPage').fadeOut();
+    $('.photoShow').slideDown();
+    
+});
+
+//zoom in photo to original size
+$('#ibra1').dblclick(()=>{
+    $('#ibra1').animate({
+        height: 288,
+        width : 514,
+    });
+});
+
+//zoom out to gallery
+$('#ibra1').click(()=>{
+    $('#ibra1').animate({
+        height: 120,
+        width : 210,
+    });
 });

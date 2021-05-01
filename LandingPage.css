@@ -154,14 +154,15 @@
     transform: scale(1.1);
     cursor: pointer;
 }
-#PhotoGallery{
-    display: flex;
-    height: 100px;
-    width: 100px;
 
+
+.photoShow:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
-.ibraPhotoGallery{
-    justify-content: space-between;
-    flex-direction: row;
+.photoShow{
+    top: 170px;
+    left: 35px;
+    position: relative;
 }
