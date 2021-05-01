@@ -166,3 +166,20 @@ $('#ibra4').click(()=>{
     });
 });
 
+
+//zoom in photo to original size
+$('#ibra5').dblclick(()=>{
+    $('#ibra5').animate({
+        height: 432,
+        width : 768,
+    });
+});
+
+//zoom out to gallery
+$('#ibra5').click(()=>{
+    $('#ibra5').animate({
+        height: 120,
+        width : 210,
+    });
+});
+
