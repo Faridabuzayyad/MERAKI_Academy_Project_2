@@ -208,3 +208,17 @@
 }
 
 
+#aboutParagraph{
+    position: absolute;
+    font-family: 'Poiret One', cursive;
+    font-size: 3em;
+    top:300px;
+    left:700px;
+    font-weight: bold;
+    transition: all 3s;
+
+}
+
+#aboutParagraph:hover{
+    transform: scale(1.1);
+}
