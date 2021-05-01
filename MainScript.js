@@ -68,6 +68,25 @@ const logIn = $('#logIn');
 
 logIn.click(goToLogIn);
 
+// Archive page function
+const goToArchive =() =>{
+    $('#aboutContent').fadeOut();
+    $('.photoShow').fadeOut();
+    $('.homeContent').fadeOut();
+    $('#mediaGalleryButtons').fadeOut();
+    $('#mediaGalleryPage').fadeOut();
+    $('#logInPage').fadeOut();
+    $('#archive').fadeIn();
+    };
+
+//Selecting Archive button    
+const archive = $('#archive');
+
+//invoking Archive function
+
+archive.click(goToArchive);
+
+
 
 
 //selecting first Image(html element)
@@ -361,4 +380,20 @@ $('#ibra15').click(()=>{
         height: 120,
         width : 210,
     });
+});
+
+
+const settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://free-football-soccer-videos1.p.rapidapi.com/v1/",
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "6ae3197b2emsh0db7bf6908f17b9p1b281djsn457261e7bdfb",
+		"x-rapidapi-host": "free-football-soccer-videos1.p.rapidapi.com"
+	}
+};
+
+$.ajax(settings).done(function (response) {
+	console.log(response);
 });
