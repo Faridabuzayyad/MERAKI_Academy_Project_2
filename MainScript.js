@@ -55,8 +55,10 @@ mediaGallery.click(goToMediaGallery);
 let currentImage = $(".currentImage");
 
 //array of players in Media Gallery Page
-let arrayOfPlayers = ['zlatanIbra.png' , 'NeymarJR.png'];
-let arrayOfIDs = ["ibra" , "neymar"];
+let arrayOfPlayers = ['zlatanIbra.png' , 'NeymarJR.png' , 'totti.png' , 'messi.png' , 'Ronaldinho.png'];
+
+//array of ID's
+let arrayOfIDs = ["ibra" , "neymar" , "totti" , "messi" , "ronaldinho"];
 
 let i = 0;
 
@@ -147,3 +149,4 @@ $('#ibra3').click(()=>{
         width : 210,
     });
 });
+

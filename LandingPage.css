@@ -144,9 +144,9 @@
 
 #neymar{
     position: absolute;
-    height: 400px;
-    width: 300px;
-    left:480px;
+    height: 450px;
+    width: 350px;
+    left:460px;
     top:250px;
 }
 
@@ -154,6 +154,46 @@
     transform: scale(1.1);
     cursor: pointer;
 }
+
+#totti{
+    position: absolute;
+    height: 450px;
+    width: 280px;
+    left:530px;
+    top:250px;
+}
+
+#totti:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#messi{
+    position: absolute;
+    height: 430px;
+    width: 300px;
+    left:550px;
+    top:250px;
+}
+
+#messi:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+} 
+
+#ronaldinho{
+    position: absolute;
+    height: 430px;
+    width: 280px;
+    left:530px;
+    top:250px;
+}
+
+#ronaldinho:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 
 
 .photoShow:hover{
@@ -166,3 +206,5 @@
     left: 35px;
     position: relative;
 }
+
+
