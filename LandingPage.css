@@ -256,3 +256,14 @@
     margin-left: 10px;
     font-weight: bold;
 }
+
+#archiveSection{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border: black solid;
+    height: 500px;
+    width: 700px;
+    top: 200px;
+    left: 300px;
+}

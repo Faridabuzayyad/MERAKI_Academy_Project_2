@@ -4,6 +4,7 @@ const goToHomePage =() =>{
     $('#mediaGalleryButtons').hide();
     $('#mediaGalleryPage').hide();
     $('.photoShow').hide();
+    $('#archiveSection').fadeOut();
     $('#logInPage').fadeOut();
     $('.homeContent').fadeIn();
 };
@@ -24,6 +25,7 @@ const goToAboutPage =(e) =>{
     $('#mediaGalleryButtons').hide();
     $('#mediaGalleryPage').hide();
     $('#logInPage').fadeOut();
+    $('#archiveSection').fadeOut();
     $('.photoShow').hide();
     $('.homeContent').hide();
 };
@@ -40,6 +42,7 @@ const goToMediaGallery =() =>{
     $('.photoShow').hide();
     $('.homeContent').hide();
     $('#logInPage').fadeOut();
+    $('#archiveSection').fadeOut();
     $('#mediaGalleryButtons').fadeIn();
     $('#mediaGalleryPage').fadeIn();
     };
@@ -58,6 +61,7 @@ const goToLogIn =() =>{
     $('.homeContent').fadeOut();
     $('#mediaGalleryButtons').fadeOut();
     $('#mediaGalleryPage').fadeOut();
+    $('#archiveSection').fadeOut();
     $('#logInPage').fadeIn();
     };
 
@@ -76,7 +80,7 @@ const goToArchive =() =>{
     $('#mediaGalleryButtons').fadeOut();
     $('#mediaGalleryPage').fadeOut();
     $('#logInPage').fadeOut();
-    $('#archive').fadeIn();
+    $('#archiveSection').fadeIn();
     };
 
 //Selecting Archive button    
@@ -382,18 +386,19 @@ $('#ibra15').click(()=>{
     });
 });
 
-
+//API to retrieve the highlights and goals of the latest football matches in JSON format
 const settings = {
 	"async": true,
 	"crossDomain": true,
-	"url": "https://free-football-soccer-videos1.p.rapidapi.com/v1/",
+	"url": "https://football98.p.rapidapi.com/liga/scorers",
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-key": "6ae3197b2emsh0db7bf6908f17b9p1b281djsn457261e7bdfb",
-		"x-rapidapi-host": "free-football-soccer-videos1.p.rapidapi.com"
+		"x-rapidapi-host": "football98.p.rapidapi.com"
 	}
 };
 
 $.ajax(settings).done(function (response) {
 	console.log(response);
 });
+
