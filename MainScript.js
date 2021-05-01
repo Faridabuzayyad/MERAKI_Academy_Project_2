@@ -115,3 +115,35 @@ $('#ibra1').click(()=>{
         width : 210,
     });
 });
+
+//zoom in photo to original size
+$('#ibra2').dblclick(()=>{
+    $('#ibra2').animate({
+        height: 571,
+        width : 855,
+    });
+});
+
+//zoom out to gallery
+$('#ibra2').click(()=>{
+    $('#ibra2').animate({
+        height: 120,
+        width : 210,
+    });
+});
+
+//zoom in photo to original size
+$('#ibra3').dblclick(()=>{
+    $('#ibra3').animate({
+        height: 360,
+        width : 640,
+    });
+});
+
+//zoom out to gallery
+$('#ibra3').click(()=>{
+    $('#ibra3').animate({
+        height: 120,
+        width : 210,
+    });
+});
