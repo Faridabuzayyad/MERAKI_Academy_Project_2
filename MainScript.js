@@ -390,15 +390,27 @@ $('#ibra15').click(()=>{
 const settings = {
 	"async": true,
 	"crossDomain": true,
-	"url": "https://football98.p.rapidapi.com/liga/scorers",
+	"url": "https://free-football-soccer-videos.p.rapidapi.com/",
 	"method": "GET",
 	"headers": {
-		"x-rapidapi-key": "6ae3197b2emsh0db7bf6908f17b9p1b281djsn457261e7bdfb",
-		"x-rapidapi-host": "football98.p.rapidapi.com"
+		"x-rapidapi-key" : "6ae3197b2emsh0db7bf6908f17b9p1b281djsn457261e7bdfb",
+		"x-rapidapi-host": "free-football-soccer-videos.p.rapidapi.com"
 	}
 };
 
 $.ajax(settings).done(function (response) {
-	console.log(response);
+    let arrayOfMatches = response;
+    $('#Highlights').click(()=>{
+        if(arrayOfMatches[0].side2.name == 'Manchester City'){
+            console.log(response)
+            $('#video').html(arrayOfMatches[0].embed);
+        }
+    }); 
 });
+
+
+    
+
+
+
 
