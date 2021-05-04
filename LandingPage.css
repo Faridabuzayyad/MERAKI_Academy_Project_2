@@ -143,19 +143,18 @@
     position: absolute;
     background-color: white;
     border:  rgba(1, 20, 82, 0.3) solid;
-    height: 600px;
-    width: 1322px;
-    left: 13px;
-    top: 190px;
+    left: 12px;
+    top: 149px;
+    height : 700px;
+    width: 1323px;
 }
 
-#video{
+#videoViewPort{
     position: absolute;
     height: 400px;
     width: 700px;
-    top: 100px;
-    left: 600px;
-    border: black solid;
+    top: -1px;
+    left: 0px;
 }
 
 #HlSearchBox{
@@ -164,37 +163,58 @@
     border-bottom: black solid;
     border-right: black solid;
     opacity: .7;
-    top: 80px;
-    left: 18px;
-    height: 395px;
-    width: 500px;
+    top: 132px;
+    left: 366px;
+    height: 365px;
+    width: 526px;
     font-weight: bold;
-    text-shadow: 2px 2px green;
+    text-shadow: 2px 2px blue;
     font-family: 'Poiret One', cursive;
     font-size: 1.7em;
+    z-index: 2;
 }
 
-#search{
+#archiveSearchButton{
     position: absolute;
-    top: 170px;
-    height: 50px;
+    top: 200px;
+    height: 40px;
     width: 100px;
-    left:220px;
+    left:233px;
 }
 
-#teamName{
+#tabHomeButton{
+    position: absolute;
+    top: 145px;
+    height: 40px;
+    width: 40px;
+    left:573px;
+    border: white solid;
+}
+
+#tabHomeButton{
+    cursor: pointer;
+}
+
+#archiveSearchButton:hover{
+    cursor: pointer;
+    background-color: green;
+}
+
+#archiveSearchBox{
+    position: absolute;
     background-color: white;
-    top: 130px;
+    top: 150px;
     left:180px;
+    height: 30px;
+    width: 200px;
 }
 
 #videoBackground{
     position: absolute;
-    height: 400px;
-    width: 700px;
-    top: 100px;
-    left: 600px;
-    border: black solid;
+    height: 511px;
+    width: 707px;
+    top: 80px;
+    left: 300px;
 }
 
 #goal{
