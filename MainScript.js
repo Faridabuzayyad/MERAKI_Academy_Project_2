@@ -125,14 +125,25 @@ const archiveSearch =()=>{
         let searchValue = $('#archiveSearchBox').val();
         arrayOfMatches.forEach(element => {
             if(element.side1.name == searchValue || element.side2.name == searchValue){
-                $('#HlSearchBox').attr('z-index' , -2);
-                $('#HlSearchBox').html(element.embed);
-            };
+                $('#HlSearchBox').hide();
+                $('#videpPlayer').html(element.embed);
+                $('#tabHomeButton').show();
+            }
+            else{
+                $('#archiveSearchBox').val("Incorrect Name");
+            }
             
         });
 
     });
 };
+
+//Archive back Button
+let tabButton = $('#tabHomeButton');
+tabButton.click(()=>{
+    $('#HlSearchBox').fadeIn();
+    $('#videpPlayer').html("");
+})
 
 //search button invokes Search function when clicked
 $("#archiveSearchButton").click(archiveSearch);
