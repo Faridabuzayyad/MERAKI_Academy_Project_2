@@ -118,8 +118,27 @@ const aboutPage = $('#aboutUs');
 // Invoking about button function
 aboutPage.click(goToAboutPage);
 
+//Archive page Search function
+const archiveSearch =()=>{
+    $.ajax(settings).done(function (response){
+        let arrayOfMatches = response;
+        let searchValue = $('#archiveSearchBox').val();
+        arrayOfMatches.forEach(element => {
+            if(element.side1.name == searchValue || element.side2.name == searchValue){
+                $('#HlSearchBox').attr('z-index' , -2);
+                $('#HlSearchBox').html(element.embed);
+            };
+            
+        });
+
+    });
+};
+
+//search button invokes Search function when clicked
+$("#archiveSearchButton").click(archiveSearch);
+
 //Media gallery page function
-const goToMediaGallery =() =>{
+const goToMediaGallery =()=>{
     $('#aboutContent').hide();
     $('.photoShow').hide();
     $('.homeContent').hide();
