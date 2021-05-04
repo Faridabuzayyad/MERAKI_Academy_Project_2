@@ -23,7 +23,7 @@ const goToHomePage =()=>{
             $('#mediaGalleryButtons').hide();
             $('#mediaGalleryPage').hide();
             $('.photoShow').hide();
-            $('#archiveSection').fadeOut();
+            $('.archiveSection').fadeOut();
             $("#homeBackground").hide();
             $('#reset').hide();
             $('.homeContent').fadeIn();
@@ -34,7 +34,7 @@ const goToHomePage =()=>{
             $('#mediaGalleryButtons').hide();
             $('#mediaGalleryPage').hide();
             $('.photoShow').hide();
-            $('#archiveSection').fadeOut();
+            $('.archiveSection').fadeOut();
             lastMatch(localStorage.getItem('favTeam'));
             personalization(localStorage.getItem('userName') , localStorage.getItem('favTeam'));
         }
@@ -106,7 +106,7 @@ const goToAboutPage =() =>{
     $('#mediaGalleryButtons').hide();
     $('#mediaGalleryPage').hide();
     $('#logInPage').fadeOut();
-    $('#archiveSection').fadeOut();
+    $('.archiveSection').fadeOut();
     $('.photoShow').hide();
     $('.homeContent').hide();
     $("#homeBackground").hide();
@@ -124,7 +124,7 @@ const goToMediaGallery =() =>{
     $('.photoShow').hide();
     $('.homeContent').hide();
     $('#logInPage').fadeOut();
-    $('#archiveSection').fadeOut();
+    $('.archiveSection').fadeOut();
     $("#homeBackground").fadeOut();
     $('#mediaGalleryButtons').fadeIn();
     $('#mediaGalleryPage').fadeIn();
@@ -147,7 +147,7 @@ const goToArchive =() =>{
     $('#mediaGalleryPage').fadeOut();
     $("#homeBackground").fadeOut();
     $('#logInPage').fadeOut();
-    $('#archiveSection').fadeIn();
+    $('.archiveSection').fadeIn();
     };
 
 //Selecting Archive button    
