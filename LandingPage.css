@@ -1,27 +1,85 @@
 #header{
-    display: flex;
-    justify-content: flex-start;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     position: absolute;
     background-color: rgb(3, 19, 53);
     height: 30px;
     width: 1329px;
     top: 120px;
     left: 12px;
-    opacity: .7;
+    opacity: .75;
     z-index: 1;
 }
 
+
 .mainMenu{
     height: 29px;
-    width: 188px;
     font-weight: bold;
     font-family: 'Poiret One', cursive;
     color: cornsilk;
     border: 1px solid black;
     text-align: center;
     font-size: 1.3em;
-    flex-flow: row wrap;
 }
+
+#date{
+    position: absolute;
+    top: -30px;
+    left: 1163px;
+    cursor: none;
+}
+
+#reset{
+    position: absolute;
+    border-radius: 5px;
+    top: 90px;
+    left: 1150px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Poiret One', cursive;
+    color: cornsilk;
+    font-size: 1em;
+    z-index: 4;
+    background-color: rgb(3, 19, 53);
+    opacity: .8;
+}
+
+#homeBackground{
+    position: absolute;
+    background-image: url(./WelcomeField/HomeACmilan.jpg);
+    background-size: cover;
+    left: 12px;
+    top: 120px;
+    height : 900px;
+    width: 1329px;
+}
+
+.TeamLogo{
+    position: absolute;
+    top: 80px;
+    right: 200px;
+    opacity: .7;
+
+}
+
+#latestMatch{
+    position: absolute;
+    left:50px;
+    top:110px;
+    height: 300px;
+    width: 700px;
+    position: absolute;
+    left:50px;
+    top:100px;
+    font-weight: bold;
+    font-family: 'Poiret One', cursive;
+    font-size: 2rem;
+    background-color: white;
+    opacity: .9;
+}
+
+
 
 .mainMenu:hover{
     background-color: green;
@@ -45,13 +103,40 @@
     border-right: black solid;
     opacity: .7;
     top: 190px;
-    left: 12px;
+    left: 20px;
     height: 370px;
-    width: 1272px;
+    width: 1270px;
     font-weight: bold;
     font-family: 'Poiret One', cursive;
     font-size: 1.5rem;
-    
+}
+
+#name{
+    height: 30px;
+    width: 180px;
+    position: absolute;
+    top:75px;
+    float: left; 
+    background-color: rgba(1, 20, 82, 0.05); 
+}
+
+
+#teamSelection{
+    height: 30px;
+    width: 120px;
+    position: absolute;
+    top:125px;
+    float: left;
+    background-color: rgba(1, 20, 82, 0.3);
+}
+
+
+#infoButton{
+    position: absolute;
+    top:170px;
+    float: left;
+    height: 40px;
+    width: 80px;
 }
 
 
@@ -83,33 +168,6 @@
     width: 1330px;
     margin-left: 4px;
 }
-
-#homePara{
-    position: absolute;
-    margin-top: 143px;
-    margin-left: 4px;
-    height: 700px;
-    width: 1330px;
-    opacity: .9;
-    background-image: url(./Stadium.jpg);
-    background-repeat: no-repeat;
-    font-size: 40px;
-    font-weight: bold;
-    font-family: 'Poiret One', cursive;
-    color: honeydew;
-    transition: all 2s;
-
-}
-
-#homePara span{
-    font-size: 1.5em;
-    font-weight: bold;
-    font-family: 'Poiret One', cursive;
-    color: green;
-    transform: scale(1.1);
-    
-}
-
 
 #mediaGalleryButtons{
     display: flex;
@@ -237,39 +295,7 @@
     transform: scale(1.1);
 }
 
-#logInPage{
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    border: black solid;
-    height: 500px;
-    width: 700px;
-    top: 200px;
-    left: 300px;
-}
 
-#logInPage input{
-    height: 20px;
-    width: 300px;
-    margin-top: 10px;
-    margin-left: 10px;
-}
-
-#logInPage label{
-    font-family: 'Poiret One', cursive;
-    font-size: 1.3em;
-    margin-top: 10px;
-    margin-left: 10px;
-    font-weight: bold;
-}
-
-#logInPage select{
-    font-family: 'Poiret One', cursive;
-    font-size: 1.3em;
-    margin-top: 10px;
-    margin-left: 10px;
-    font-weight: bold;
-}
 
 #archiveSection{
     display: flex;

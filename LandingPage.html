@@ -17,22 +17,38 @@
 <body>
 
     <div id="title"><img id="logo" src="./Site LOGO.png" alt=""></div>
+    <input id="reset" type="button" value="Reset" title="Click here if you want to reset your preferences">
+    <div id="homeBackground">
+        <img class="TeamLogo" src="./WelcomeField/ACmilan logo.png" alt="acMilanLogo">
+        <div id="latestMatch">What happened in last match!</div>
+    </div>
     <div id="header">
+        <iframe id="date" src="https://free.timeanddate.com/clock/i7sgkr0k/n11/fn14/fs16/pd2/tt1/tw1" frameborder="0" width="188" height="21"></iframe>
         <div id="home" class="mainMenu">Home</div></a>
         <div id="archive" class="mainMenu">Archive</div></a>
-        <div id="mediaGallery" class="mainMenu">Media Gallery</div></a>
+        <div id="mediaGallery" class="mainMenu">Photo Gallery</div></a>
         <div id="liveResults" class="mainMenu">Live Results</div></a>
         <div id="newsBlog" class="mainMenu">News Blog</div></a>
-        <div id="logIn" class="mainMenu">Log in</div></a>
         <div id="aboutUs" class="mainMenu">About us</div></a>
     </div>
 
 
-    <div class=".bodyMain">
+    <div class="bodyMain">
         <div class="homeContent">
-            <fieldset id="welcomeField">
+          <fieldset id="welcomeField">
                 <legend style="color: rgb(0, 0, 0); font-size: 2rem" id="wFtext">Welcome</legend>
                 let's richen your experience in our site , please choose your preferences :
+                <input id="name" type="text" placeholder="Enter Your Name here" >
+                <select name="team" id="teamSelection">
+                    <option value="AC Milan">AC Milan</option>
+                    <option value="Real Madrid">Real Madrid</option>
+                    <option value="FC Barcelona">FC Barcelona</option>
+                    <option value="Manchester United">Manchester United</option>
+                    <option value="Juventus">Juventus</option>
+                </select>
+                
+                <input id="infoButton" type="button" value="Finish" >
+                
             </fieldset>
             </div>
     </div>
@@ -71,27 +87,7 @@
     <img id='ibra15' class="photoShow" src="./PhotoGallery/ibra15.jpg" alt="" height="120px" width="210px">
     
 
-    
-      
-    <div id="logInPage">
-        <form id="formOfLogIn">
-            <label>Name</label><br>
-            <input type="text" id="name" name="name">
-            <br>
-            <label>Email</label><br>
-            <input type="email" id="email" name="email">
-            <br>
-            <label>Gender</label><br>
-            <select name="gender" id="gender">
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-            </select>
-            <br>
-            <input type="submit" value="Log In">
-    
-    
-        </form>
-    </div>    
+       
 
     <div id="archiveSection">
         <input type="button" id="Highlights" value="Man city">
@@ -109,7 +105,6 @@
 
 
 
-        
       
 
 

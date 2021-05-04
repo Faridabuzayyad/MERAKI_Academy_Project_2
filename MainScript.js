@@ -1,26 +1,107 @@
-// Home button function 
-const goToHomePage =() =>{
-    $('#aboutContent').hide();
-    $('#mediaGalleryButtons').hide();
-    $('#mediaGalleryPage').hide();
-    $('.photoShow').hide();
-    $('#archiveSection').fadeOut();
-    $('#logInPage').fadeOut();
-    $('.homeContent').fadeIn();
+//API to retrieve the highlights and goals of the latest football matches in JSON format
+const settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://free-football-soccer-videos.p.rapidapi.com/",
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key" : "6ae3197b2emsh0db7bf6908f17b9p1b281djsn457261e7bdfb",
+		"x-rapidapi-host": "free-football-soccer-videos.p.rapidapi.com"
+	}
 };
 
-//load Home Page with Home page content when entering the site
-goToHomePage();
+$.ajax(settings).done(function (response) {
+    console.log(response);
+    });
 
-// Selecting home button
+
+// Home button function 
+const goToHomePage =()=>{
+            if(!localStorage.getItem('userName')){
+            //for first visit and after Reset preferences 
+            $('#aboutContent').hide();
+            $('#mediaGalleryButtons').hide();
+            $('#mediaGalleryPage').hide();
+            $('.photoShow').hide();
+            $('#archiveSection').fadeOut();
+            $("#homeBackground").hide();
+            $('#reset').hide();
+            $('.homeContent').fadeIn();
+        }
+        else{
+            $('#welcomeField').hide();
+            $('#aboutContent').hide();
+            $('#mediaGalleryButtons').hide();
+            $('#mediaGalleryPage').hide();
+            $('.photoShow').hide();
+            $('#archiveSection').fadeOut();
+            lastMatch(localStorage.getItem('favTeam'));
+            personalization(localStorage.getItem('userName') , localStorage.getItem('favTeam'));
+        }
+    };
+
+//Selecting Home button
 const homePage = $('#home');
 
-// Invoking home button function
+// Invoking about button function
 homePage.click(goToHomePage);
+
+//check the userInput and store it in localStorage
+const welcomeField =()=>{
+    if($('#name').val()){
+    let userName = $('#name').val();
+    let favTeam = $('#teamSelection').children("option:selected").val();
+    localStorage.setItem('userName' , userName);
+    localStorage.setItem('favTeam' , favTeam);
+    lastMatch(favTeam);
+    personalization(userName , favTeam);
+    }
+    else{
+        $('#name').css('background' , 'rgba(1, 20, 82, 0.3)')
+    }
+}
+
+//infoButton invokes welcomeField function
+$('#infoButton').click(welcomeField);
+
+
+//get the latest match for User Team
+const lastMatch =(favTeam)=>{
+    $.ajax(settings).done(function (response) {
+        let arrayOfMatches = response;
+        arrayOfMatches.forEach(element => {
+            if(element.side1.name === favTeam || element.side2.name === favTeam){
+                $('#latestMatch').html(element.embed);
+            }
+            
+        });
+
+        });
+}
+
+//personalization function 
+const personalization =(userName , userTeam) =>{
+    $('#welcomeField').slideUp();
+    if(userTeam){
+        $('#TeamLogo').fadeIn();
+        $('#homeBackground').fadeIn();
+        $('#latestMatch').slideDown();
+        $('#reset').fadeIn();
+
+    }
+};
+
+//Reset button functionality 
+$('#reset').click(()=>{
+    if(confirm("Are you sure you want to reset ?")){
+    localStorage.clear();
+    location.reload();
+    };
+});
 
 
 // About page function
-const goToAboutPage =(e) =>{
+const goToAboutPage =() =>{
     $('#aboutContent').fadeIn();
     $('#mediaGalleryButtons').hide();
     $('#mediaGalleryPage').hide();
@@ -28,6 +109,7 @@ const goToAboutPage =(e) =>{
     $('#archiveSection').fadeOut();
     $('.photoShow').hide();
     $('.homeContent').hide();
+    $("#homeBackground").hide();
 };
 
 //Selecting about button
@@ -43,6 +125,7 @@ const goToMediaGallery =() =>{
     $('.homeContent').hide();
     $('#logInPage').fadeOut();
     $('#archiveSection').fadeOut();
+    $("#homeBackground").fadeOut();
     $('#mediaGalleryButtons').fadeIn();
     $('#mediaGalleryPage').fadeIn();
     };
@@ -54,23 +137,6 @@ const mediaGallery = $('#mediaGallery');
 
 mediaGallery.click(goToMediaGallery);
 
-// Log in page function
-const goToLogIn =() =>{
-    $('#aboutContent').fadeOut();
-    $('.photoShow').fadeOut();
-    $('.homeContent').fadeOut();
-    $('#mediaGalleryButtons').fadeOut();
-    $('#mediaGalleryPage').fadeOut();
-    $('#archiveSection').fadeOut();
-    $('#logInPage').fadeIn();
-    };
-
-//Selecting Log in button    
-const logIn = $('#logIn');
-
-//invoking LogIn function
-
-logIn.click(goToLogIn);
 
 // Archive page function
 const goToArchive =() =>{
@@ -79,6 +145,7 @@ const goToArchive =() =>{
     $('.homeContent').fadeOut();
     $('#mediaGalleryButtons').fadeOut();
     $('#mediaGalleryPage').fadeOut();
+    $("#homeBackground").fadeOut();
     $('#logInPage').fadeOut();
     $('#archiveSection').fadeIn();
     };
@@ -386,31 +453,8 @@ $('#ibra15').click(()=>{
     });
 });
 
-//API to retrieve the highlights and goals of the latest football matches in JSON format
-const settings = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://free-football-soccer-videos.p.rapidapi.com/",
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key" : "6ae3197b2emsh0db7bf6908f17b9p1b281djsn457261e7bdfb",
-		"x-rapidapi-host": "free-football-soccer-videos.p.rapidapi.com"
-	}
-};
-
-$.ajax(settings).done(function (response) {
-    let arrayOfMatches = response;
-    $('#Highlights').click(()=>{
-        if(arrayOfMatches[0].side2.name == 'Manchester City'){
-            console.log(response)
-            $('#video').html(arrayOfMatches[0].embed);
-        }
-    }); 
-});
-
-
-    
-
+//home page function invocation for the first visit
+goToHomePage();
 
 
 
